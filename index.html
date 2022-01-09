@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div id="container">
+      <main>
+        <h3>登入</h3>
+        <form>
+          <input id="email" type="email" placeholder="請輸入email帳號" />
+          <input id="password" type="password" placeholder="請輸入密碼" />
+          <input type="button" id="login" value="登入" />
+        </form>
+        <div id="btn"><input id="registBtn" type="button" value="註冊" /></div>
+        <div id="msg"></div>
+      </main>
+      <div id="overlay" class="-none">
+        <article>
+          <h3>註冊</h3>
+          <input type="text" id="registEmail" placeholder="請輸入email帳號" />
+          <input type="password" id="registPassword" placeholder="請輸入密碼" />
+          <div>
+            <input type="button" id="sendBtn" value="確認" />
+            <input type="button" id="closeBtn" value="取消" />
+          </div>
+          <div id="errMsg"></div>
+        </article>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyD2wqiaMs6xaMnl8zmwxNydVFwKUXWmntY",
+        authDomain: "login-page-6d179.firebaseapp.com",
+        projectId: "login-page-6d179",
+        storageBucket: "login-page-6d179.appspot.com",
+        messagingSenderId: "204028663284",
+        appId: "1:204028663284:web:10004443ca2873e1e895a1",
+        measurementId: "G-2ZXZ47KCXW",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <title>Profile</title>
+  </head>
+  <body>
+    <div id="main">
+      <div id="profile">
+        <div class="top">
+          <h3 id="user"></h3>
+        </div>
+        <div class="bottom">
+          <input type="button" id="change" value="修改密碼" />
+          <input type="button" id="checkout" value="登出" />
+        </div>
+      </div>
+      <div id="changearea" class="-none">
+        <div id="changePassword">
+          <input type="text" id="oldPassword" placeholder="請輸入舊密碼" />
+          <input type="text" id="newPassword" placeholder="請輸入新密碼" />
+        </div>
+        <div id="btnGroup">
+          <input type="button" id="sendBtn" value="確定修改" />
+          <input type="button" id="cancel" value="取消" />
+        </div>
+      </div>
+      <div id="message"></div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyD2wqiaMs6xaMnl8zmwxNydVFwKUXWmntY",
+        authDomain: "login-page-6d179.firebaseapp.com",
+        projectId: "login-page-6d179",
+        storageBucket: "login-page-6d179.appspot.com",
+        messagingSenderId: "204028663284",
+        appId: "1:204028663284:web:10004443ca2873e1e895a1",
+        measurementId: "G-2ZXZ47KCXW",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="js/profile.js"></script>
+  </body>
+</html>
